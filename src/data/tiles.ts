@@ -23,6 +23,6 @@ const toTile = ({color, ...rest}: TileDTO): Tile => ({
   ...rest,
 })
 
-const tileMaxCount = 18
+const tileMaxCount = 100
 
 export const tiles: Tile[] = tileData.map(toTile).slice(0, tileMaxCount)

@@ -15,7 +15,7 @@ import {
 import {tiles} from "./data/tiles";
 import styled from "styled-components";
 import {Colors} from "./colors";
-import {Masonry, Masonry1} from "./masonry/Masonry";
+import {Masonry} from "./Masonry";
 import {useMediaQuery} from "./hooks/useMediaQuery";
 
 const MasonryTitle = styled(Title)({
@@ -74,8 +74,11 @@ function App() {
         </Navbar>
         <Paper>
           <Box width="100%">
-            <Masonry columns={columns} spacing={34}>
-              {colorPickedTiles.map(({ title, id, color, height, url }) => (
+            <Masonry
+              columns={columns}
+              items={colorPickedTiles}
+              spacing={34}
+              renderItem={({id, color, height, url, title}) => (
                 <MasonryTile
                   key={id}
                   color={color}
@@ -84,8 +87,8 @@ function App() {
                 >
                   <Subtitle text={title} />
                 </MasonryTile>
-              ))}
-            </Masonry>
+              )}
+            />
           </Box>
         </Paper>
       </Container>

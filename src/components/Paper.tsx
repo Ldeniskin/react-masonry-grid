@@ -6,15 +6,15 @@ export const Paper = styled(Box)({
   height: "100%",
   width: "100%",
   '@media(min-width: 680px)': {
-    padding: '34px 49px',
+    padding: '0px 49px',
   },
   '@media(min-width: 940px)': {
-    padding: '34px 35px',
+    padding: '0px 35px',
   },
   '@media(min-width: 1240px)': {
-    padding: '34px',
+    padding: '0px 34px',
   },
-  padding: '34px calc(50vw - 127px)',
+  padding: '0px calc(50vw - 127px)',
   borderTopLeftRadius: 16,
   borderTopRightRadius: 16,
   display: "flex",
